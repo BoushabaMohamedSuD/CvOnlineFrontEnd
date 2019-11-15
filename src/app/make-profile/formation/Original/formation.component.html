@@ -1,0 +1,149 @@
+<form class="container-fluid MainContainer" #f="ngForm" (ngSubmit)="SubmiteSimple()">
+    <div *ngIf="isLoaded">
+        <div class="row" *ngFor="let item of nbrsFormations; let i=index;let ilast=last;">
+            <div class="col-lg-9 offset-lg-2  MainHolder">
+                <div class="HolderInfo bg-dark">
+                    <p id="title">Formation {{i+1}}</p>
+                    <div class="form">
+                        <div class="left col-lg-5 col-md-1 ">
+                            <div class="hodlerInput">
+                                <div class="form-group holdertextarea">
+                                    <label for=""> </label>
+                                    <textarea (change)="ChangeInput(i,$event)" (click)="pass(i)" class="form-control "
+                                        name="formation{{i}}" ngModel id="" rows="6" placeholder="Formation"
+                                        [(ngModel)]="FormationsArray[i].formation"
+                                        [value]="FormationsArray[i].formation"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="hodlerInput">
+                                <input (change)="ChangeInput(i,$event)" type="text" ngModel name="establishement{{i}}"
+                                    class="input" placeholder="establishment"
+                                    [(ngModel)]="FormationsArray[i].establishement"
+                                    [value]="FormationsArray[i].establishement">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="right offset-lg-2 col-lg-5 col-md-1 ">
+                            <div class="row">
+                                <div class="col-lg-12 debut ">
+                                    <label for="">Begun of formation</label>
+                                    <div class="HolderDebut">
+                                        <select (change)="ChangeInput(i,$event)" class="selector" ngModel
+                                            name="yearsBegun{{i}}" id="" [(ngModel)]="FormationsArray[i].yearsBegun"
+                                            [value]="FormationsArray[i].yearsBegun">
+                                            <option disabled selected hidden> Years</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                        </select>
+                                        <select (change)="ChangeInput(i,$event)" class="selector"
+                                            name="mounthsBegun{{i}}" id="" ngModel
+                                            [(ngModel)]="FormationsArray[i].mounthsBegun"
+                                            [value]="FormationsArray[i].mounthsBegun">
+                                            <option disabled selected hidden>Mounth</option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June </option>
+                                            <option>July</option>
+                                            <option>August </option>
+                                            <option>September</option>
+                                            <option>October </option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 fin">
+                                    <label for="">End of formation</label>
+                                    <div class="HolderFin">
+                                        <select (change)="ChangeInput(i,$event)" ngModel class="selector"
+                                            name="yearsLast{{i}}" id="" [(ngModel)]="FormationsArray[i].yearsLast"
+                                            [value]="FormationsArray[i].yearsLast">
+                                            <option disabled selected hidden> Years</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                        </select>
+                                        <select (change)="ChangeInput(i,$event)" ngModel class="selector"
+                                            name="mounthsLast{{i}}" id="" [(ngModel)]="FormationsArray[i].mounthsLast"
+                                            [value]="FormationsArray[i].mounthsLast">
+                                            <option disabled selected>Mouth</option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June </option>
+                                            <option>July</option>
+                                            <option>August </option>
+                                            <option>September</option>
+                                            <option>October </option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="offset-lg-1 col-lg-3">
+
+                                    <input (change)="SetFile($event,i)" ngModel #input #name="ngModel"
+                                        [ngModelOptions]="{standalone: true}" [name]="i" id="Upload" type="file"
+                                        class="uplaod_input" required />
+
+                                    <input name="Uplaod_input" type="button" class="button-add" (click)="input.click()"
+                                        value="cerificat her" />
+                                </div>
+                                <div class="ofset-lg-1 col-lg-3">
+                                    <button class="button-add" id="button-add" (click)="newFormation()">add</button>
+                                </div>
+                                <div class="ofset-lg-1 col-lg-3">
+                                    <button *ngIf="i+1>1" class="button-add" id="button-add"
+                                        (click)="deleteFormation(i)">delete</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div *ngIf="ilast" class="row HolderButton">
+                            <button class="btn button submit" type="submit">
+                                submit <span class="badge badge-primary"></span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</form>

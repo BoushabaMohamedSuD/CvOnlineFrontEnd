@@ -1,0 +1,69 @@
+<div class="GlobaleField">
+    <div class="container-fluid bg-dark MainDiv">
+
+        <ul class=" " *ngIf="KleMakeProfile==0">
+            <li class="nav-item">
+                <a [routerLink]="['title']" routerLinkActive="link-active" class="link">title</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['PersonaleInfo']" *ngIf="kletitle" routerLinkActive="link-active" class="link">Info
+                    Personal</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Info personal</p>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['Formation']" *ngIf="kletitle" routerLinkActive="link-active"
+                    class="link">Formation</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Formation</p>
+            </li>
+            <li class="nav-item ">
+                <a [routerLink]="['Competence']" *ngIf="kletitle" routerLinkActive="link-active"
+                    class="link">Competence</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Competence</p>
+            </li>
+            <li class="nav-item" class="link">
+                <a [routerLink]="['Language']" *ngIf="kletitle" routerLinkActive="link-active" class="link">Language</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Language</p>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['Leisure']" *ngIf="kletitle" routerLinkActive="link-active" class="link">Leisure</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Leisur</p>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['Project']" *ngIf="kletitle" routerLinkActive="link-active" class="link">Projects</a>
+                <p class="linkDisabled" *ngIf="!kletitle">Project</p>
+            </li>
+        </ul>
+        <ul class=" " *ngIf="KleMakeProfile==1">
+
+            <li class="nav-item">
+                <a [routerLink]="['/MakeProfile']" routerLinkActive="link-active" class="link">Create Cv</a>
+            </li>
+            <ng-container *ngIf="GeneralKleUpdateTitles">
+                <li class="nav-item">
+                    <a [routerLink]="['/MakeProfile','QuikLook']" routerLinkActive="link-active"
+                        (click)="quikLook();$event.stopPropagation()" class="link">Quik Look</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/export']" routerLinkActive="link-active" class="link">Export</a>
+                </li>
+                <li class="nav-item">
+                    <button (click)="updateTitle();$event.stopPropagation()">Update Titles</button>
+                </li>
+                <li class="nav-item">
+                    <button (click)="deleteCv();$event.stopPropagation()">Delete Cv</button>
+                </li>
+            </ng-container>
+
+        </ul>
+        <ul class=" " *ngIf="KleMakeProfile==2">
+            <li class="nav-item">
+                <a [routerLink]="['/MakeProfile']" (click)="updateCv()" routerLinkActive="link-active"
+                    class="link">Upadte Cv</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/MakeProfile']" routerLinkActive="link-active" class="link">Export as pdf</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>

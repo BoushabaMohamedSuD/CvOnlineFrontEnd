@@ -1,0 +1,27 @@
+<div class="container-fluid" class="MainContainer">
+    <div class="row">
+        <div class="col-lg-9 offset-lg-2  MainHolder">
+            <div class="HolderInfo bg-dark">
+                <p id="title">title</p>
+                <form #f="ngForm" class="col-lg-12" (submit)="addTitleOrUpdate(f)">
+                    <div class=" row left   ">
+                        <div class="hodlerInput offset-lg-10">
+                            <input type="text" #input class="input" name="title" placeholder="title of cv" required
+                                ngModel [value]="inputValue" [(ngModel)]="inputValue">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row HolderButton " style="margin-left: -60px; margin-top: 300px;">
+                        <button class="btn button submit offset-lg-11" type="submit">
+                            submite <span class=" badge badge-primary"></span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>

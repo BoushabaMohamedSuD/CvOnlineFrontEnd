@@ -1,0 +1,19 @@
+.Main {
+    /*  background-color: red;*/
+    width: 1000px;
+    margin-left: 28%;
+}
+
+.card {
+    background-color: rgba(255, 255, 0, 0);
+    padding: 3px 3px 3px 3px;
+    border: none;
+
+}
+
+.example-card {}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}

@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!--for routing -->
+  <base href="/">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="body1" id="Main" style="position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+    overflow:hidden;">
+
+  <app-root></app-root>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+    integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous">
+    </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+    }
+    function test() {
+      const data = document.getElementById('PDF');
+      html2canvas(data).then(function (canvas) {
+        document.body.appendChild(canvas);
+      });
+    }
+    function pdf() {
+      console.log(':::::::Converting to PDF:::::::');
+      const element = document.getElementById('PDF');
+      const data = document.getElementById('PDF');
+      html2canvas(data).then(canvas => {
+        // Few necessary setting options
+        const imgWidth = 208;
+        const pageHeight = 295;
+        const imgHeight = canvas.height * imgWidth / canvas.width;
+        const heightLeft = imgHeight;
+
+        const contentDataURL = canvas.toDataURL('image/png');
+        const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+        const position = 0;
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
+        pdf.save('MYPdf.pdf'); // Generated PDF
+      });
+    }
+  </script>
+
+
+  <script src="app/contact-us/screen.min.js">
+  </script>
+  <script>
+    function bravo() {
+      console.log('bravo')
+      html2canvas(document.querySelector("#test12")).then(canvas => {
+        document.body.appendChild(canvas)
+        console.log(canvas.toDataURL('image/png'));
+        console.log('bravo');
+      });
+    }
+
+  </script>
+
+
+</body>
+
+</html>

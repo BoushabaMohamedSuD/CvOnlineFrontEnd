@@ -1,0 +1,44 @@
+<form class="container-fluid" class="MainContainer" (ngSubmit)="SubmiteSimple()" *ngIf="isLoaded">
+    <div class="row" *ngFor="let item of nbrsLeisures; let i=index;let ilast=last;">
+        <div class="col-lg-9 offset-lg-2  MainHolder">
+            <div class="HolderInfo bg-dark">
+                <p id="title">Leisure {{i+1}}</p>
+                <div class="col-lg-12 form" style="display: block">
+                    <div class="left col-lg-12 col-md-1 ">
+                        <div class="hodlerInput">
+                            <input (change)="ChangeInput(i,$event)" type="text" class="input" placeholder="Leisure"
+                                name="leisure{{i}}" [(ngModel)]="Leisures[i].leisur">
+
+                        </div>
+                        <div class="row">
+                            <div class="offset-lg-4 col-lg-2">
+                                <button class="button-add" id="button-add" (click)="newCompetence()">add</button>
+                            </div>
+                            <div class=" col-lg-2">
+                                <button *ngIf="i+1>1" class="button-add" id="button-add"
+                                    (click)="deleteCompetence(i)">delete</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div *ngIf="ilast" class="HolderButton col-lg-12">
+
+
+                        <button class="btn button submit" type="submit">
+                            submit
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>

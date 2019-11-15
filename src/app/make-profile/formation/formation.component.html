@@ -1,0 +1,105 @@
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel *ngFor="let item of nbrsFormations; let i=index;let ilast=last;" [expanded]="step === i"
+        (opened)="setStep(i)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{i+1}}
+            </mat-panel-title>
+            <mat-panel-description>
+                Formation
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-card class="InputHolder">
+            <form class="example-container" #f="ngForm" (ngSubmit)="SubmiteSimple()">
+                <mat-form-field>
+                    <textarea matInput (change)="ChangeInput(i,$event)" (click)="pass(i)" class="form-control "
+                        name="formation{{i}}" ngModel placeholder="Formation" [(ngModel)]="FormationsArray[i].formation"
+                        [value]="FormationsArray[i].formation" required></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput (change)="ChangeInput(i,$event)" type="text" ngModel name="establishement{{i}}"
+                        class="input" placeholder="establishment" [(ngModel)]="FormationsArray[i].establishement"
+                        [value]="FormationsArray[i].establishement" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Year Begun Formation</mat-label>
+                    <mat-select (change)="ChangeInput(i,$event)" class="selector" ngModel name="yearsBegun{{i}}" id=""
+                        [(ngModel)]="FormationsArray[i].yearsBegun" [value]="FormationsArray[i].yearsBegun" required>
+                        <mat-option>None</mat-option>
+                        <mat-option value="2019">2019</mat-option>
+                        <mat-option value="2018">2018</mat-option>
+                        <mat-option value="2017">2017</mat-option>
+                        <mat-option value="2016">2016</mat-option>
+                        <mat-option value="2015">2015</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Month Begun Formation</mat-label>
+                    <mat-select (change)="ChangeInput(i,$event)" class="selector" name="mounthsBegun{{i}}" id="" ngModel
+                        [(ngModel)]="FormationsArray[i].mounthsBegun" [value]="FormationsArray[i].mounthsBegun">
+                        <mat-option>None</mat-option>
+                        <mat-option value="January">January</mat-option>
+                        <mat-option value="February">February</mat-option>
+                        <mat-option value="March">March</mat-option>
+                        <mat-option value="April">April</mat-option>
+                        <mat-option value="May">May</mat-option>
+                        <mat-option value="June">June</mat-option>
+                        <mat-option value="July">July</mat-option>
+                        <mat-option value="August">August</mat-option>
+                        <mat-option value="September">September</mat-option>
+                        <mat-option value="October">October</mat-option>
+                        <mat-option value="November">November</mat-option>
+                        <mat-option value="December">December</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Year End Formation</mat-label>
+                    <mat-select (change)="ChangeInput(i,$event)" ngModel class="selector" name="yearsLast{{i}}" id=""
+                        [(ngModel)]="FormationsArray[i].yearsLast" [value]="FormationsArray[i].yearsLast" required>
+                        <mat-option>None</mat-option>
+                        <mat-option value="2019">2019</mat-option>
+                        <mat-option value="2018">2018</mat-option>
+                        <mat-option value="2017">2017</mat-option>
+                        <mat-option value="2016">2016</mat-option>
+                        <mat-option value="2015">2015</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Month End Formation</mat-label>
+                    <mat-select (change)="ChangeInput(i,$event)" ngModel class="selector" name="mounthsLast{{i}}" id=""
+                        [(ngModel)]="FormationsArray[i].mounthsLast" [value]="FormationsArray[i].mounthsLast">
+                        <mat-option>None</mat-option>
+                        <mat-option value="January">January</mat-option>
+                        <mat-option value="February">February</mat-option>
+                        <mat-option value="March">March</mat-option>
+                        <mat-option value="April">April</mat-option>
+                        <mat-option value="May">May</mat-option>
+                        <mat-option value="June">June</mat-option>
+                        <mat-option value="July">July</mat-option>
+                        <mat-option value="August">August</mat-option>
+                        <mat-option value="September">September</mat-option>
+                        <mat-option value="October">October</mat-option>
+                        <mat-option value="November">November</mat-option>
+                        <mat-option value="December">December</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <input (change)="SetFile($event,i)" ngModel #input #name="ngModel" [ngModelOptions]="{standalone: true}"
+                    [name]="i" id="Upload" type="file" class="uplaod_input" style="display: none;" required />
+                <button mat-raised-button type="button" color='accent' name="Uplaod_input" (click)="input.click()">your
+                    certificat
+                    her</button>
+                <button mat-raised-button *ngIf="ilast" (click)="newFormation()" style=" margin-top: 8px;" type="button"
+                    color="primary">add</button>
+                <button mat-raised-button *ngIf="nbrsFormations.length>1" (click)="deleteFormation(i)"
+                    style=" margin-top: 8px;" type="button" color="warn">delete</button>
+                <button mat-raised-button *ngIf="ilast" class="submite" type="submit">Submite</button>
+            </form>
+        </mat-card>
+        <mat-action-row>
+            <button mat-button *ngIf="i>0" color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button *ngIf="!ilast" color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+</mat-accordion>

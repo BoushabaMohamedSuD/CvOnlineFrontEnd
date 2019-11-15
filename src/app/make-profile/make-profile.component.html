@@ -1,0 +1,120 @@
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Title of your cv
+            </mat-panel-title>
+            <mat-panel-description>
+                Type your title here
+                <mat-icon>title</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-title></app-title>
+        <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Personal Data
+            </mat-panel-title>
+            <mat-panel-description>
+                Type your personal information here
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-info-personel></app-info-personel>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                vocational training
+            </mat-panel-title>
+            <mat-panel-description>
+                set your vocational trainings here
+                <mat-icon>school</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-formation></app-formation>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Competence
+            </mat-panel-title>
+            <mat-panel-description>
+                set your competences here
+                <mat-icon>computer</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-competence></app-competence>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Language
+            </mat-panel-title>
+            <mat-panel-description>
+                set your languages here
+                <mat-icon>language</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-langue></app-langue>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Interests
+            </mat-panel-title>
+            <mat-panel-description>
+                set your Interests here
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-leisure></app-leisure>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel *ngIf="kletitle" [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Projects
+            </mat-panel-title>
+            <mat-panel-description>
+                set your project here
+                <mat-icon>work</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>under development</p>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+
+
+</mat-accordion>

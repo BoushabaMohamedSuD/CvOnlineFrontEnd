@@ -1,0 +1,86 @@
+.GlobaleField {
+    height: 100%;
+    width: 200px;
+    float: right;
+}
+
+.MainDiv {
+    width: 200px;
+    height: 600px;
+    /*background-image: linear-gradient(to right top,rgba(0, 0, 0, 0.938) 80%,#ffe657 200%);*/
+    float: right;
+    margin-top: -120px;
+    border-style: double hidden;
+    border-color: aqua;
+    border-width: 15px;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    margin-top: -50px;
+}
+
+ul {
+
+    height: 400px;
+    width: 100%;
+    /* background-color: #ffda0b;*/
+    text-align: center;
+    margin-top: 130px;
+}
+
+li {
+    background-color: linear-gradient(to right top, rgba(197, 255, 89, 0.692) 40%, #ffda0b 100%);
+    margin-top: 8px;
+    border-radius: 30%;
+    list-style-type: none;
+    border-style: double hidden;
+    border-color: rgb(240, 9, 39);
+    border-width: 5px;
+    height: 40px;
+    text-align: center;
+    vertical-align: center;
+}
+
+a {
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+/**for hover*/
+.MainDiv:hover {
+    border-color: yellow;
+}
+
+li:hover {
+    border-color: rgb(11, 255, 64);
+    height: 50 px;
+    margin-top: -5px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#a {
+    color: aqua
+}
+
+.a-active {
+    color: green;
+}
+
+.link {
+    color: aqua;
+}
+
+.linkDisabled {
+    color: gray;
+}
+
+.link-active {
+    color: green;
+}
+
+.link:hover {
+    color: yellow;
+}

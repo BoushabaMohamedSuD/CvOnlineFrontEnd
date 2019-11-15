@@ -1,0 +1,10 @@
+<app-nav-bar (styleEmit)="changestyle($event)"></app-nav-bar>
+<mat-drawer-container class="example-container" [hasBackdrop]="keymode">
+  <mat-drawer #drawer [mode]="mode" class="drawer">
+    <button mat-button color="primary">Primary</button>
+    {{content.measureScrollOffset('top')}}
+  </mat-drawer>
+  <mat-drawer-content #content style="background-color: rgb(114, 204, 61);">
+    <router-outlet (activate)="onActivate($event,content)"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

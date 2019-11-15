@@ -1,0 +1,33 @@
+<mat-spinner *ngIf="!isLoaded"></mat-spinner>
+<mat-accordion *ngIf="isLoaded" class="example-headers-align">
+    <mat-expansion-panel *ngFor="let item of nbrsLeisures; let i=index;let ilast=last;" [expanded]="step === i"
+        (opened)="setStep(i)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{i+1}}
+            </mat-panel-title>
+            <mat-panel-description>
+                Interest
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-card class="InputHolder">
+            <form class="example-container" #f="ngForm" (ngSubmit)="SubmiteSimple()">
+                <mat-form-field>
+                    <input matInput (change)="ChangeInput(i,$event)" ngModel class="textarea" name="leisure{{i}}"
+                        placeholder="Competence" [(ngModel)]="Leisures[i].leisur" required />
+                </mat-form-field>
+                <button mat-raised-button *ngIf="ilast" (click)="newCompetence()" style=" margin-top: 8px;"
+                    type="button" color="primary">add</button>
+                <button mat-raised-button *ngIf="nbrsLeisures.length>1" (click)="deleteCompetence(i)"
+                    style=" margin-top: 8px;" type="button" color="warn">delete</button>
+                <button mat-raised-button *ngIf="ilast" class="submite" type="submit">Submite</button>
+            </form>
+        </mat-card>
+        <mat-action-row>
+            <button mat-button *ngIf="i>0" color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button *ngIf="!ilast" color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+</mat-accordion>

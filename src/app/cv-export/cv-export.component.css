@@ -1,0 +1,826 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --web-view-ids: CV___1;
+}
+
+#CV___1 * {
+    margin: 0;
+    padding: 0;
+}
+
+#CV___1 {
+    position: absolute;
+    box-sizing: border-box;
+    background: #E5E5E5;
+    width: 790.6195068359375px;
+    height: 1118.1539306640625px;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    --web-view-name: CV – 1;
+    --web-view-id: CV___1;
+    --web-enable-deep-linking: true;
+}
+
+#Mask_Group_1 {
+    position: absolute;
+    left: -17px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Path_1 {
+    fill: url(#LinearGradientFill1);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    overflow: hidden;
+}
+
+.Path_1 {
+
+    overflow: hidden;
+    position: absolute;
+    top: -370px;
+    left: -8px;
+    width: 100px;
+    height: 2000px;
+
+
+
+}
+
+#Group_1 {
+    position: absolute;
+    left: 0px;
+    top: -26.757px;
+
+
+}
+
+#Path_3 {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgb(16, 184, 246);
+    stroke-width: 50px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_3 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 26.85px;
+    left: 0px;
+    width: 790.62px;
+    height: 1118.06px;
+
+}
+
+#Path_2 {
+    fill: url(#LinearGradientFill2);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+
+}
+
+.Path_2 {
+
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: -450px;
+    width: 2000px;
+    height: 150px;
+
+}
+
+#Ellipse_1 {
+    fill: url(#LinearGradientFill3);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_1 {
+    position: absolute;
+    overflow: visible;
+    width: 309.217px;
+    height: 308.733px;
+    left: -56.409px;
+    top: -57.566px;
+    transform: rotate(-25deg);
+}
+
+#NoPath___Copie__8_ {
+    fill: url(#NoPath___Copie__8__A1_Ellipse_4_pattern);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.NoPath___Copie__8_ {
+    position: absolute;
+    overflow: visible;
+    width: 179px;
+    height: 179px;
+    left: 11px;
+    top: 7px;
+}
+
+#EL_MEHDI_JBILOU {
+    position: absolute;
+    left: 307px;
+    top: 93px;
+    overflow: visible;
+    width: 249px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgba(255, 0, 61, 1);
+}
+
+#Group_19 {
+    position: absolute;
+    left: 325.177px;
+    top: 259.661px;
+    overflow: visible;
+    background-color: red;
+}
+
+#Path_5 {
+    fill: url(#LinearGradientFill4);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_5 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 80px;
+    left: 73.892px;
+    width: 18.382px;
+    height: 550px;
+    overflow: hidden;
+}
+
+#Path_4 {
+    filter: drop-shadow(20px 20px 20px rgba(28, 255, 187, 1));
+    fill: url(#LinearGradientFill5);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_4 {
+
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: 230.222px;
+    height: 197.817px;
+
+
+}
+
+#Path_7 {
+    filter: drop-shadow(20px 20px 20px rgba(28, 255, 187, 1));
+    fill: url(#LinearGradientFill6);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_7 {
+    transform: rotate(182deg);
+    overflow: visible;
+    position: absolute;
+    top: 520px;
+    left: -70px;
+    width: 217.559px;
+    height: 199.974px;
+}
+
+#baseline_phone_black_48dp {
+    fill: url(#baseline_phone_black_48dp_A1_Rectangle_2_pattern);
+
+}
+
+.baseline_phone_black_48dp {
+    position: absolute;
+    overflow: visible;
+    width: 20px;
+    height: 20px;
+    left: 315.356px;
+    top: 145px;
+    overflow: hidden;
+
+}
+
+#_212_645_342290 {
+    position: absolute;
+    left: 346px;
+    top: 145px;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#NoPath___Copie {
+    fill: url(#NoPath___Copie_A1_Rectangle_4_pattern);
+}
+
+.NoPath___Copie {
+    position: absolute;
+    overflow: visible;
+    width: 20px;
+    height: 20px;
+    left: 315.356px;
+    top: 170.261px;
+}
+
+#ID21_ANS {
+    position: absolute;
+    left: 344px;
+    top: 171px;
+    overflow: visible;
+
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#NoPath___Copie__2_ {
+    fill: url(#NoPath___Copie__2__A1_Rectangle_6_pattern);
+}
+
+.NoPath___Copie__2_ {
+    position: absolute;
+    overflow: visible;
+    width: 20.082px;
+    height: 20px;
+    left: 315.356px;
+    top: 195.166px;
+}
+
+#Lot_essalam_N_33_J_sebah_Skhir {
+    position: absolute;
+    left: 346.356px;
+    top: 196.885px;
+    overflow: visible;
+
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Elmehdijbilou_gmail_com {
+    position: absolute;
+    left: 345.663px;
+    top: 222.336px;
+    overflow: visible;
+
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#NoPath___Copie__4_ {
+    fill: url(#NoPath___Copie__4__A1_Rectangle_8_pattern);
+}
+
+.NoPath___Copie__4_ {
+    position: absolute;
+    overflow: visible;
+    width: 20px;
+    height: 20px;
+    left: 316.356px;
+    top: 220.336px;
+}
+
+#Group_2 {
+    position: absolute;
+    width: 280.616px;
+    height: 48.83px;
+    left: 91.685px;
+    top: 388.17px;
+    overflow: visible;
+}
+
+#Path_6 {
+    fill: url(#LinearGradientFill7);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_6 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 24.566px;
+    left: 152.813px;
+    width: 97.802px;
+    height: 6.944px;
+}
+
+#Ellipse_4 {
+    fill: url(#LinearGradientFill8);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_4 {
+    position: absolute;
+    overflow: visible;
+    width: 40px;
+    height: 48.83px;
+    left: 240.616px;
+    top: 0px;
+}
+
+#Formation {
+    position: absolute;
+    left: 0px;
+    top: 16.443px;
+    overflow: visible;
+    width: 113px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Group_20 {
+    position: absolute;
+    width: 292.616px;
+    height: 48.83px;
+    left: 79.685px;
+    top: 663.17px;
+    overflow: visible;
+}
+
+#Path_6_A1_Path_8 {
+    fill: url(#LinearGradientFill9);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_6_A1_Path_8 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 24.566px;
+    left: 164.813px;
+    width: 97.802px;
+    height: 6.944px;
+}
+
+#Ellipse_4_A1_Ellipse_6 {
+    fill: url(#LinearGradientFill10);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_4_A1_Ellipse_6 {
+    position: absolute;
+    overflow: visible;
+    width: 40px;
+    height: 48.83px;
+    left: 252.616px;
+    top: 0px;
+}
+
+#competences {
+    position: absolute;
+    left: 0px;
+    top: 16.443px;
+    overflow: visible;
+    width: 137px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Group_21 {
+    position: absolute;
+    width: 262.616px;
+    height: 48.83px;
+    left: 457.685px;
+    top: 663.17px;
+    overflow: visible;
+}
+
+#Path_6_A1_Path_9 {
+    fill: url(#LinearGradientFill11);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_6_A1_Path_9 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 24.566px;
+    left: 134.813px;
+    width: 97.802px;
+    height: 6.944px;
+}
+
+#Ellipse_4_A1_Ellipse_7 {
+    fill: url(#LinearGradientFill12);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_4_A1_Ellipse_7 {
+    position: absolute;
+    overflow: visible;
+    width: 40px;
+    height: 48.83px;
+    left: 222.616px;
+    top: 0px;
+}
+
+#loisIrs {
+    position: absolute;
+    left: 0px;
+    top: 16.443px;
+    overflow: visible;
+    width: 77px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Group_22 {
+    position: absolute;
+    width: 267.616px;
+    height: 48.83px;
+    left: 452.685px;
+    top: 388.17px;
+    overflow: visible;
+}
+
+#Path_6_A1_Path_10 {
+    fill: url(#LinearGradientFill13);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_6_A1_Path_10 {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: visible;
+    position: absolute;
+    top: 24.566px;
+    left: 139.813px;
+    width: 97.802px;
+    height: 6.944px;
+}
+
+#Ellipse_4_A1_Ellipse_8 {
+    fill: url(#LinearGradientFill14);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_4_A1_Ellipse_8 {
+    position: absolute;
+    overflow: visible;
+    width: 40px;
+    height: 48.83px;
+    left: 227.616px;
+    top: 0px;
+}
+
+#Langues {
+    position: absolute;
+    left: 0px;
+    top: 16.443px;
+    overflow: visible;
+    width: 87px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********for the formation*************/
+
+#Group_7 {
+
+    width: 15%;
+    overflow: visible;
+    height: 100%;
+    /* background-color: red;*/
+
+}
+
+#Polygon_1 {
+    fill: url(#LinearGradientFill15);
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Polygon_1 {
+    transform: rotate(90deg);
+    overflow: visible;
+    width: 27.799px;
+    height: 24.767px;
+
+}
+
+#Polygon_2 {
+    fill: rgba(255, 255, 255, 1);
+}
+
+.Polygon_2 {
+
+    transform: rotate(90deg);
+    overflow: visible;
+    width: 38.514px;
+    height: 13px;
+    position: relative;
+    top: -10px;
+    left: -12px;
+}
+
+#Baccalaur_at_en_science_physiq {
+    /* background-color: yellow;*/
+    overflow: visible;
+    width: 85%;
+    white-space: normal;
+    text-align: left;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(112, 112, 112, 1);
+    display: inline-block;
+    position: relative;
+    top: 5px;
+
+
+
+}
+
+
+
+
+#elementFormation {
+    /* background-color: aqua;*/
+    width: 110%;
+    display: flex;
+
+}
+
+#formationHolder {
+    position: absolute;
+    /*  background-color: yellow;*/
+    width: 260px;
+    height: 210px;
+    left: 90px;
+    top: 450px;
+}
+
+span::before {
+    content: "\A";
+
+}
+
+/********for the competence*************/
+#competenceHolder {
+    position: absolute;
+    /*background-color: yellow;*/
+    width: 260px;
+    height: 270px;
+    left: 90px;
+    top: 730px;
+
+}
+
+#elementCompetence {
+
+    width: 110%;
+    display: flex;
+}
+
+/*****for language***********/
+
+#ARABE {
+
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(112, 112, 112, 1);
+    /*background-color: green;*/
+    width: 39px;
+}
+
+
+.Group_15 {
+    /*background-color: yellow;*/
+    width: 193.619px;
+    height: 22.966px;
+    overflow: visible;
+}
+
+.Rectangle_1_rect {
+
+    stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+
+.Rectangle_1 {
+
+    overflow: visible;
+    width: 193.619px;
+    height: 22.966px;
+
+}
+
+
+
+#Group_16 {
+
+    width: 254.315px;
+    height: 22.966px;
+    overflow: visible;
+    display: flex;
+
+
+
+}
+
+
+#ID95_ {
+    overflow: visible;
+    width: 24px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Stencil;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(232, 36, 167, 1);
+    position: relative;
+    top: -20px;
+    float: right;
+
+}
+
+#elementLanguage {
+    height: 30px;
+
+}
+
+#languageHolder {
+    /* background-color: gray;*/
+    position: absolute;
+    width: 270px;
+    height: 210px;
+    left: 460px;
+    top: 450px;
+
+}
+
+/*****for leisur*********/
+#elementLeisur {
+    width: 110%;
+    display: flex;
+}
+
+#leisureHolder {
+
+    position: absolute;
+    width: 260px;
+    height: 270px;
+    left: 450px;
+    top: 730px;
+
+}
+
+/*******end***************/

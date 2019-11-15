@@ -1,0 +1,62 @@
+<form class="container-fluid" class="MainContainer" (ngSubmit)="SubmiteSimple()" *ngIf="isLoaded">
+    <div class="row" (click)="pass(i)" *ngFor="let item of nbrsCompetences; let i=index;let ilast=last;">
+        <div class="col-lg-9 offset-lg-2  MainHolder">
+            <div class="HolderInfo bg-dark">
+                <p id="title">Competence {{i+1}}</p>
+                <div class="col-lg-12 form" style="display: block">
+                    <div class="left col-lg-12 col-md-1 ">
+                        <div class="hodlerInput">
+                            <div class="form-group holdertextarea">
+                                <label for=""> </label>
+                                <textarea (change)="ChangeInput(i,$event)" ngModel class="textarea"
+                                    name="competence{{i}}" id="" rows="4" cols="80" placeholder="Competence"
+                                    [(ngModel)]="Competences[i].competence"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="hodlerInput">
+                            <div class="form-group">
+                                <label for=""></label>
+                                <select (change)="ChangeInput(i,$event)" ngModel class="selector" name="level{{i}}"
+                                    id="" [(ngModel)]="Competences[i].level">
+                                    <option disabled selected hidden> Level</option>
+                                    <option>Expert</option>
+                                    <option>Pro</option>
+                                    <option>Normale</option>
+                                    <option>Beginner</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-lg-3 col-lg-2">
+                                <input name="Uplaod" id="Upload" type="file" class="uplaod_input" required />
+                                <input name="Uplaod_input" type="button" class="button-add"
+                                    onclick="document.getElementById('Upload').click()" value="cerificat her" />
+                            </div>
+                            <div class="col-lg-2">
+                                <button class="button-add" id="button-add" (click)="newCompetence()">add</button>
+                            </div>
+                            <div class=" col-lg-2">
+                                <button *ngIf="i+1>1" class="button-add" id="button-add"
+                                    (click)="deleteCompetence(i)">delete</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div *ngIf="ilast" class="HolderButton col-lg-12">
+                        <button class="btn button submit" type="submit">
+                            submit
+                        </button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <form>

@@ -1,0 +1,97 @@
+<div class="container-fluid " id="inputContainer">
+    <div class="row bg-dark col-lg-10 offset-lg-1" id="inputRow">
+        <div id="MainLogin" class="col-lg-2 col-md-12 col-sm-12 offset-lg-2 offset-md-0">
+
+            <form class="form" id="loginForm" (ngSubmit)="submit(f)" #f="ngForm">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Log in your account</p>
+                <div class="holderInputImage">
+                    <input type="text" placeholder="username"
+                        class="{{styleService.input}} {{ErrorBackendLogin.ErrorUsername}}" id="usernameInput"
+                        name="username" required ngModel #usernameLogin="ngModel" />
+                    <img class="image" src="https://png.pngtree.com/svg/20170510/username_1047848.png" alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorUsername">please check you username is correct</span>
+                <span class="ErrorValide" *ngIf="usernameLogin.touched && !usernameLogin.dirty">please complete this
+                    field</span>
+                <div class="holderInputImage">
+                    <input type="password" placeholder="password"
+                        class="{{styleService.input}} {{ErrorBackendLogin.ErrorPassword}}" id="usernameInput"
+                        name="password" required ngModel #passwordLogin="ngModel" />
+                    <img class="image" src="https://png.pngtree.com/svg/20140724/01df69a99c.png" alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorPassword">please check you password is correct</span>
+                <span class="ErrorValide" *ngIf="passwordLogin.touched && !passwordLogin.dirty">please complete this
+                    field</span>
+                <button class="btn button" type="submit" [disabled]="!f.valid">
+                    login <span class="badge badge-primary"></span>
+                </button>
+            </form>
+        </div>
+        <div id="Or" class="col-lg-2  col-md-12 col-sm-12 offset-lg-1 offset-md-0">
+            <button type="button" id="{{style}}" (click)="OnClick($event)">Or</button>
+
+        </div>
+        <div id="Mainregistre" class="col-lg-3 col-md-12 col-sm-12 offset-0">
+            <form class="form" id="registreForm" (ngSubmit)="submit(f1)" #f1="ngForm">
+                <p>registre now !!!!!!!!!</p>
+                <div class="holderInputImage">
+                    <input type="text" placeholder="username"
+                        class="{{styleService.input}} {{ErrorBackendRegistre.ErrorUsername}} " id="usernameInput"
+                        name="username" required ngModel #usernameRegistre="ngModel" />
+                    <img class="image" src="https://png.pngtree.com/svg/20170510/username_1047848.png" alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorUsernameRegistre">this username is already existe</span>
+                <span class="ErrorValide" *ngIf="usernameRegistre.touched && !usernameRegistre.dirty">please complete
+                    this
+                    field</span>
+                <div class="holderInputImage">
+                    <input type="email" placeholder="email"
+                        class="{{styleService.input}} {{ErrorBackendRegistre.ErrorEmail}} " id="usernameInput"
+                        name="email" required ngModel email #emailRegistre="ngModel" />
+                    <img class="image"
+                        src="https://i2.wp.com/www.ucaubenas.com/wp-content/uploads/email-logo.png?fit=256%2C256.png"
+                        alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorEmailRegistre">this email is already existe</span>
+                <span class="ErrorValide" *ngIf="!emailRegistre.valid && emailRegistre.touched">please enter
+                    a valide email</span>
+
+                <div class="holderInputImage">
+                    <input type="password" placeholder="password"
+                        class="{{styleService.input}} {{ErrorBackendRegistre.ErrorPassword}}" id="usernameInput"
+                        name="password" required ngModel #passwordRegistre="ngModel" />
+                    <img class="image" src="https://png.pngtree.com/svg/20140724/01df69a99c.png" alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorPasswordRegistre"> nothing ot say in the all situation</span>
+                <span class="ErrorValide" *ngIf="passwordRegistre.touched && !passwordRegistre.dirty">please complete
+                    this
+                    field</span>
+                <div class="holderInputImage">
+                    <input type="password" placeholder="confirm your password"
+                        class="{{styleService.input}} {{ErrorBackendRegistre.ErrorCPassword}}" id="usernameInput"
+                        name="confirm_password" required ngModel #CPasswordRegistre="ngModel" />
+                    <img class="image" src="https://png.pngtree.com/svg/20140724/01df69a99c.png" alt="sorry" />
+                </div>
+                <span class="ErrorValide" *ngIf="ErrorCPasswordRegistre">please confirm you password</span>
+                <span class="ErrorValide" *ngIf="CPasswordRegistre.touched && !CPasswordRegistre.dirty">please complete
+                    this
+                    field</span>
+                <button class="btn button" type="submit" [disabled]="!f1.valid">
+                    registre <span class="badge badge-primary"></span>
+                </button>
+            </form>
+        </div>
+
+
+        <!-- </div>
+  <button type="button" class="btn btn-primary" (click)="sendTest()">TestSend</button>
+       <button type="button" class="btn btn-primary" (click)="postTest()">PostSend</button>
+  <button type="button" class="btn btn-primary" (click)="LoginAuto()">AutonLogin</button>
+  <button type="button" class="btn btn-primary" (click)="isConnected()">isConnected</button>
+    <button type="button" class="btn btn-primary" (click)="isConnectedjwt()">isConnectedjwt</button>
+  <button type="button" class="btn btn-primary" (click)="LoginFromUrl()">LoginUrl</button>
+  <button type="button" class="btn btn-primary" (click)="getToken()">getToken</button>
+   <div>
+      <button type="button" class="btn btn-primary" (click)="getToken()">getToken</button>
+    </div>
+</div>-->

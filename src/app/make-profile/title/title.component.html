@@ -1,0 +1,9 @@
+<mat-card class="InputHolder">
+    <form class="example-container" id="registreForm" (submit)="addTitleOrUpdate(f)" #f="ngForm">
+        <mat-form-field>
+            <input matInput type="text" placeholder="title" id="usernameInput" name="title" required ngModel #input
+                ngModel [value]="inputValue" [(ngModel)]="inputValue">
+        </mat-form-field>
+        <button mat-raised-button class="submite" type="submit">Submite</button>
+    </form>
+</mat-card>

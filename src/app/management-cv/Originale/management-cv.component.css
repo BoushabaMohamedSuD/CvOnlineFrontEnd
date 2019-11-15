@@ -1,0 +1,71 @@
+.MainHolder {
+    height: 110%;
+    width: 1100px;
+    margin-left: 100px;
+    padding-left: 100px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    border-radius: 15%;
+    border-style: double hidden;
+    border-color: aqua;
+    border-width: 20px;
+
+}
+
+.SingleRow {
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-style: outset double;
+    border-top-width: 8px;
+    border-left-width: 12px;
+    border-bottom-width: 8px;
+    border-right-width: 5px;
+    border-color: rgba(218, 36, 12, 0.712);
+    background-color: rgb(0, 132, 255);
+
+}
+
+.HolderImage {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(0, 132, 255);
+    border-radius: 50%;
+    border-style: double;
+    border-width: 3px;
+    border-color: rgb(0, 132, 255);
+    border-collapse: separate;
+
+
+}
+
+input {
+    margin-right: 20px;
+    width: 120px;
+    height: 35px;
+    margin-left: -10px;
+    text-align: center;
+    border-radius: 5%;
+    color: black;
+    border-style: outset;
+    border-width: 5px;
+    border-color: rgba(255, 255, 0, 0.692);
+}
+
+.MainHolder:hover {
+    border-color: yellow;
+}
+
+.SingleRow:hover {
+    border-color: yellowgreen;
+}
+
+input:hover {
+    border-color: yellow;
+}

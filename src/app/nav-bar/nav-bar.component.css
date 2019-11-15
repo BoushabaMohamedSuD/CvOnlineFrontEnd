@@ -1,0 +1,77 @@
+.loginlink {
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 40px;
+  text-align: center;
+
+
+}
+
+.im {
+  width: 40px;
+  height: 40px;
+  margin-right: 500px;
+  margin-right: 20px;
+  border-radius: 50%;
+
+
+}
+
+.im:hover {
+  width: 42px;
+  height: 42px;
+}
+
+#imLogo {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+}
+
+#imLogo:hover {
+  height: 32px;
+  width: 32px;
+
+}
+
+.linkNav1 {
+  color: white;
+  opacity: 0.6;
+
+
+}
+
+.linkNav1:hover {
+  opacity: 1;
+  transition: 1;
+}
+
+.linkNav2 {
+  color: yellow;
+  opacity: 0.6;
+
+}
+
+.linkNav2:hover {
+  opacity: 1;
+  transition: 1;
+
+}
+
+.span1 {
+  color: crimson;
+}
+
+.span2 {
+  color: green;
+}
+
+.activelink {
+  color: aqua;
+}
+
+.navbar-brand {
+  margin-left: 8px;
+}

@@ -1,0 +1,22 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.InputHolder {
+    width: 100%;
+    margin-top: 0px;
+
+}
+
+.submite {
+    background-color: #03DAC5;
+    margin-top: 8px;
+    color: rgb(255, 255, 255);
+}
+
+.switch {
+    color: #03DAC5;
+}

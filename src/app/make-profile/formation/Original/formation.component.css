@@ -1,0 +1,243 @@
+p {
+    color: aqua;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+}
+
+p:hover {
+    color: yellow;
+}
+
+#title {
+    margin-left: 450px;
+    margin-top: 20px;
+}
+
+.MainHolder {}
+
+.HolderInfo {
+    height: 500px;
+    border-radius: 20%;
+    border-style: double hidden;
+    border-color: aqua;
+    border-width: 20px;
+    width: 1000px;
+    margin-left: -10%;
+
+}
+
+.HolderInfo:hover {
+    border-color: yellow;
+}
+
+.form {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+}
+
+.left {
+
+    padding-top: 100px;
+}
+
+.input {
+    width: 400px;
+    height: 50px;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: 1s;
+    background-color: rgb(36, 111, 141);
+    border-radius: 0px 50px;
+    border-bottom-width: 10px;
+    padding-left: 20px;
+    color: yellow;
+    padding-left: 60px;
+    padding-bottom: 10px;
+    border-color: aqua;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 10px;
+}
+
+.input:hover {
+    border-color: yellow;
+}
+
+.input:focus {
+    border-color: rgb(57, 245, 57);
+}
+
+.input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: yellow;
+    opacity: 0.7;
+    /* Firefox */
+}
+
+.input:hover::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: yellow;
+    opacity: 1;
+    /* Firefox */
+    transition: 1;
+}
+
+.input:focus {
+    border-color: rgb(30, 255, 30);
+}
+
+.right {
+
+    padding-top: 100px;
+}
+
+.inputfile {}
+
+.inputfile+button {
+    background-color: yellow;
+    color: yellow
+}
+
+textarea {
+    background-color: rgb(36, 111, 141);
+    color: yellow;
+    border-style: double;
+    border-color: aqua;
+    border-bottom-width: 10px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    resize: none;
+}
+
+textarea:hover {
+    border-bottom-color: yellow;
+}
+
+textarea::placeholder {
+    color: yellow;
+    opacity: 0.7;
+    /* Firefox */
+}
+
+textarea:hover::placeholder {
+    color: yellow;
+    opacity: 1;
+    /* Firefox */
+    transition: 1
+        /* Firefox */
+}
+
+textarea:focus {
+    background-color: rgb(36, 111, 141);
+    color: yellow;
+    border-color: rgb(30, 255, 30);
+}
+
+.holderbutton {
+
+    width: 150px;
+    height: 50px;
+    margin-top: 400px;
+    margin-left: -620px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(36, 111, 141, 0);
+    border-radius: 0px 50px;
+    border-bottom-width: 10px;
+    font-family: fantasy;
+    font-size: 16px;
+    border-style: solid;
+    border-color: rgb(36, 111, 141);
+    color: rgb(36, 111, 141);
+    text-align: center;
+    opacity: 2;
+
+}
+
+.button:hover {
+    color: yellowgreen;
+    border-color: chartreuse;
+    border-radius: 50%;
+    transition: 1;
+}
+
+image {
+    height: 20px;
+    width: 20px;
+}
+
+
+/*new for formation*/
+label {
+    color: yellow;
+}
+
+.HolderDebut {
+    width: 400px;
+    display: inline-flex;
+}
+
+.selector {
+    width: 150px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: rgb(36, 111, 141);
+    color: yellow;
+    border-style: double hidden;
+    border-color: aqua;
+    border-width: 4px;
+    border-radius: 20%;
+
+
+}
+
+.selector:hover {
+    border-color: yellow;
+}
+
+.selector:focus {
+    border-color: rgb(30, 255, 30);
+}
+
+.fin {
+    margin-top: 20px;
+}
+
+
+.uplaod_input {
+    visibility: hidden;
+}
+
+.button-add {
+    background-color: rgb(36, 111, 141);
+    border-style: double hidden;
+    border-color: aqua;
+    border-width: 4px;
+    height: 50px;
+    border-radius: 30%;
+    width: 100px;
+    color: yellow;
+
+}
+
+.button-add:hover {
+    border-color: yellow;
+}
+
+.button-add:focus {
+    border-color: rgb(30, 255, 30);}
+
+#button-add {
+    margin-top: 30px;
+}
+
+.submit {
+    margin-left: 50px;
+}

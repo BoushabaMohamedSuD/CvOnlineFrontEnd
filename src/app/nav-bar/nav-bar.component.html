@@ -1,0 +1,75 @@
+<div class=" container-fluid">
+  <div class="row" id="navbar">
+    <nav class="navbar navbar-expand-sm navbar-dark col-lg-12 {{styleLocal.navstyle}}  ">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse-target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button mat-raised-button (click)="toggleDrawer()"
+        style="background-color: rgba(255, 0, 0, 0); height: 40px; width: 40px;text-align: center; ">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active"
+        style="text-align: center; vertical-align: center;"><img
+          src="https://image.shutterstock.com/image-vector/initial-letter-cv-linked-circle-260nw-406630342.jpg"
+          alt="Can't Display Image" id="imLogo" />
+        <span style="margin-left: 10px" class="{{styleService.navbar}}">CvOnline</span></a>
+
+      <div class="collapse navbar-collapse" id="collapse-target">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" routlinkactive="activelink" [routerLink]="['/home']" #Home
+              (click)="changehome(Home)">Home
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [routerLink]="['/contact_us']" routlinkactive="activelink"><span
+                class="{{styleLocal.linkstyle}}">contact_use</span> </a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!isconnected" class="nav-link " [routerLink]="['/login&registre']"><span
+                class="{{styleLocal.linkstyle}}">clogin&registre</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><span class="{{styleLocal.linkstyle}}">Style</span></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <button class="dropdown-item" (click)="OnChangeStyle('style1')">Style1</button>
+              <button class="dropdown-item" (click)="OnChangeStyle('style2')">Style2</button>
+              <button class="dropdown-item" (click)="OnChangeStyleService('style3')">Style3</button>
+              <button class="dropdown-item" (click)="OnChangeStyleService('style4')">Style4</button>
+
+            </div>
+          </li>
+
+          <li *ngIf="isconnected" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Options</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" [routerLink]="['/MnagementCv']">Management Cv</a>
+              <a class="dropdown-item" [routerLink]="['/MakeProfile']" (click)="addCv()">Add Cv</a>
+              <button class="dropdown-item" (click)="logout()">Log Out</button>
+            </div>
+          </li>
+        </ul>
+        <form *ngIf="isconnected; else isnot" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+        <ng-template #isnot>
+          <a class=" loginLink" href="#"><img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt=" sorry"
+              class="im"></a>
+          <a class=" loginLink" href="#"><img
+              src="https://cdn.imgbin.com/13/23/21/imgbin-gmail-email-logo-g-suite-google-gmail-gmail-icon-Wx6AacCLBd7kM75xsEpgH4xpR.jpg"
+              alt=" sorry" class="im"></a>
+          <a class=" loginLink" href="#"><img
+              src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
+              alt=" sorry" class="im"></a>
+        </ng-template>
+      </div>
+    </nav>
+  </div>
+
+</div>

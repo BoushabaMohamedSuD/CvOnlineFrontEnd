@@ -1,0 +1,44 @@
+<mat-spinner *ngIf="!isLoaded"></mat-spinner>
+<mat-accordion *ngIf="isLoaded" class="example-headers-align">
+    <mat-expansion-panel *ngFor="let item of nbrsLaungues; let i=index;let ilast=last;" [expanded]="step === i"
+        (opened)="setStep(i)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{i+1}}
+            </mat-panel-title>
+            <mat-panel-description>
+                language
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-card class="InputHolder">
+            <form class="example-container" #f="ngForm" (ngSubmit)="SubmiteSimple()">
+                <mat-form-field>
+                    <input matInput (change)="ChangeInput(i,$event)" ngModel class="textarea" name="competence{{i}}"
+                        placeholder="Language" [(ngModel)]="Languages[i].language" required />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Level</mat-label>
+                    <mat-select (change)="ChangeInput(i,$event)" ngModel class="selector" name="level{{i}}" id=""
+                        [(ngModel)]="Languages[i].level" required>
+                        <mat-option>None</mat-option>
+                        <mat-option value="Expert">Expert</mat-option>
+                        <mat-option value="Pro">Pro</mat-option>
+                        <mat-option value="Normale">Normale</mat-option>
+                        <mat-option value="Beginner">Beginner</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-raised-button *ngIf="ilast" (click)="newCompetence()" style=" margin-top: 8px;"
+                    type="button" color="primary">add</button>
+                <button mat-raised-button *ngIf="nbrsLaungues.length>1" (click)="deleteCompetence(i)"
+                    style=" margin-top: 8px;" type="button" color="warn">delete</button>
+                <button mat-raised-button *ngIf="ilast" class="submite" type="submit">Submite</button>
+            </form>
+        </mat-card>
+        <mat-action-row>
+            <button mat-button *ngIf="i>0" color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button *ngIf="!ilast" color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+</mat-accordion>

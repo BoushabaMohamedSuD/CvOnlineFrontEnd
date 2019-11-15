@@ -1,0 +1,53 @@
+<mat-card class="InputHolder" *ngIf="switchLoginRegistre">
+  <form class="example-container" (ngSubmit)="submit(f)" #f="ngForm">
+    <mat-form-field>
+      <input matInput type="text" placeholder="username" id="usernameInput" name="username" required ngModel
+        #usernameLogin="ngModel">
+      <mat-error *ngIf="ErrorUsername">please check if you username is correct</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" id="usernameInput"
+        name="password" required ngModel #passwordLogin="ngModel">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="ErrorPassword">please check if you password is correct</mat-error>
+    </mat-form-field>
+    <button mat-raised-button class="switch" type="button" (click)="switchLoginRegistre=!switchLoginRegistre">Switch
+      To Register</button>
+    <button mat-raised-button class="submite" type="submit" [disabled]="!f.valid">Login</button>
+  </form>
+</mat-card>
+<mat-card class="InputHolder" *ngIf="!switchLoginRegistre">
+  <form class="example-container" id="registreForm" (ngSubmit)="submit(f1)" #f1="ngForm">
+    <mat-form-field>
+      <input matInput type="text" placeholder="username" id="usernameInput" name="username" required ngModel
+        #usernameRegistre="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" id="usernameInput" name="email" required ngModel email
+        #emailRegistre="ngModel">
+      <mat-error *ngIf="emailValidator.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" id="usernameInput"
+        name="password" required ngModel #passwordRegistre="ngModel">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" id="usernameInput"
+        name="confirm_password" required ngModel #CPasswordRegistre="ngModel">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button class="switch" type="button" (click)="switchLoginRegistre=!switchLoginRegistre">Switch
+      To Login</button>
+    <button mat-raised-button class="submite" type="submit" [disabled]="!f1.valid ">Regiter</button>
+  </form>
+</mat-card>

@@ -1,0 +1,43 @@
+<div class="container-fluid Main" (click)="Click(-1,$event);$event.stopPropagation()" #Main>
+    <div class="row align-items-center">
+        <div class="col-lg-3  col-md-4 card singlerow" #SingleRow (click)="Click(i,$event);$event.stopPropagation()"
+            *ngFor="let cv of Cvs;let i=index;">
+            <mat-card class="example-card">
+                <button mat-icon-button (click)="export(i,$event);$event.stopPropagation()" class="buEx" color="accent">
+                    <mat-icon>import_export</mat-icon>
+                </button>
+                <button mat-icon-button (click)="Update(i,$event);$event.stopPropagation()" class="buEx"
+                    color="primary">
+                    <mat-icon>update</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteCv(i,$event);$event.stopPropagation()" class="buDel"
+                    color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+                <img *ngIf="isLoaded" mat-card-image src="{{SrsImages[i].src}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <p *ngIf="!cv.kleActive" class="title">{{cv.title}}</p>
+                    <mat-form-field *ngIf="cv.kleActive">
+                        <mat-form-field appearance="fill">
+                            <mat-label>New Title</mat-label>
+                            <input matInput [(ngModel)]="inputActiveValue" name="title" placeholder="Tile of cv"
+                                ngModel>
+                            <mat-icon matSuffix>title</mat-icon>
+                            <mat-hint color="warn">{{cv.title}}</mat-hint>
+                        </mat-form-field>
+                    </mat-form-field>
+                    <button mat-raised-button class="bu" *ngIf="!cv.kleActive">Upadate
+                        title</button>
+                    <button mat-raised-button class="buB" *ngIf="cv.kleActive" (click)="updateTitle()">Upadate</button>
+                    <button mat-raised-button class="buB" *ngIf="cv.kleActive">Return Back</button>
+                </mat-card-actions>
+
+            </mat-card>
+        </div>
+
+    </div>
+</div>

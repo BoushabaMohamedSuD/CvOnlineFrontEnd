@@ -1,0 +1,47 @@
+<p style="font-family: cursive; font-size: 30px;margin-left:40%">contact-us works!</p>
+<ul id="PDF">
+    <li *ngFor="let item of lists; let i=index">
+        hele {{lists[i]}}
+        <svg class="Rectangle_1" height="50" width="300">
+            <linearGradient spreadMethod="pad" attr.id="LinearGradientFill24{{i}}" x1="0.012973351404070854" x2="1"
+                y1="0.5" y2="0.5">
+                <stop [attr.offset]="lists[i]/10" stop-color="#20f200" stop-opacity="1">
+                </stop>
+                <stop offset="0" stop-color="#34db1a" stop-opacity="1"></stop>
+                <stop offset="0" stop-color="#808080" stop-opacity="1"></stop>
+            </linearGradient>
+            <rect class="Rectangle_1_rect" attr.fill="url(#LinearGradientFill24{{i}})" rx="35" ry="35" x="0" y="0"
+                width="641" height="70">
+            </rect>
+        </svg>
+    </li>
+</ul>
+
+<button type="button" class="btn btn-primary" onclick="pdf()">PDF</button>
+
+<button type="button" class="btn btn-primary" (click)="onPdf()">html2pdf</button>
+<button type="button" class="btn btn-primary" onclick="test()">test</button>
+<button type="button" class="btn btn-primary" onclick="bravo()">bravo</button>
+<button type="button" class="btn btn-primary" (click)="onpdf(test)">html2</button>
+<div id="test12" #test>
+
+    <svg class="Rectangle_1" height="50" width="300" *ngFor="let item of lists; let i=index">
+        <linearGradient spreadMethod="pad" attr.id="LinearGradientFill24{{i}}" x1="0.012973351404070854" x2="1" y1="0.5"
+            y2="0.5">
+            <stop [attr.offset]="lists[i]/10" stop-color="#20f200" stop-opacity="1">
+            </stop>
+            <stop offset="0" stop-color="#34db1a" stop-opacity="1"></stop>
+            <stop offset="0" stop-color="#808080" stop-opacity="1"></stop>
+        </linearGradient>
+        <rect class="Rectangle_1_rect" attr.fill="url(#LinearGradientFill24{{i}})" rx="35" ry="35" x="0" y="0"
+            width="641" height="70">
+        </rect>
+    </svg>
+    <svg height="210" width="500" style="position: relative; left: 50px; height:500px ;">
+        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1;" />
+    </svg>
+    <p style="color: red; font-size: 20px; float:right; ">jdksds</p>
+    <svg style="background-color: red;">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+</div>

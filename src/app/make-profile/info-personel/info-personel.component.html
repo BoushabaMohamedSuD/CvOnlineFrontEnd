@@ -1,0 +1,31 @@
+<mat-spinner *ngIf="!isLoaded"></mat-spinner>
+<mat-card *ngIf="isLoaded" class="InputHolder">
+    <form class="example-container" id="registreForm" #f="ngForm" (ngSubmit)="Submite(f)">
+        <mat-form-field>
+            <input matInput type="text" id="usernameInput" name="firstname" placeholder="your first name" required
+                ngModel [(ngModel)]="InfoPersonal.firstname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" id="usernameInput" name="lastname" placeholder="your last name" required ngModel
+                [(ngModel)]="InfoPersonal.lastname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="email" placeholder="your email" id="usernameInput" name="email" required ngModel email
+                [(ngModel)]="InfoPersonal.email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <span matPrefix>+1 &nbsp;</span>
+            <input type="tel" matInput name="number" placeholder="your nbr phone" required ngModel
+                [(ngModel)]="InfoPersonal.nbrtele">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput name="adress" placeholder="your address" required ngModel
+                [(ngModel)]="InfoPersonal.adress"></textarea>
+        </mat-form-field>
+        <input (change)="setimage($event)" ngModel #input #name="ngModel" [ngModelOptions]="{standalone: true}"
+            name="picture" style=" display: none;" id="Upload" type="file" class="uplaod_input" />
+        <button mat-raised-button color='accent' name="Uplaod_input" (click)="input.click()">your image her</button>
+        <button mat-raised-button class="submite" type="submit">Submite</button>
+    </form>
+</mat-card>

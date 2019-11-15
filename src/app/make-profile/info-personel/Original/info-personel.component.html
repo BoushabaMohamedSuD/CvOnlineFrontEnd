@@ -1,0 +1,56 @@
+<div class="container-fluid" class="MainContainer">
+    <div class="row" *ngIf="isLoaded">
+        <div class="col-lg-9 offset-lg-2  MainHolder">
+            <div class="HolderInfo bg-dark">
+                <p id="title">Personale info</p>
+                <form #f="ngForm" (ngSubmit)="Submite(f)">
+                    <div class="left col-lg-5 col-md-1 ">
+                        <div class="hodlerInput">
+                            <input type="text" class="input" name="firstname" placeholder="your first name" required
+                                ngModel [(ngModel)]="InfoPersonal.firstname">
+                            <img src="" alt="">
+                        </div>
+                        <div class="hodlerInput">
+                            <input type="text" name="lastname" class="input" placeholder="your last name" required
+                                ngModel [(ngModel)]="InfoPersonal.lastname">
+                            <img src="" alt="">
+                        </div>
+                        <div class="hodlerInput">
+                            <input type="text" name="email" class="input" [(ngModel)]="InfoPersonal.email"
+                                placeholder="your email" required ngModel>
+                            <img src="" alt="">
+                        </div>
+                        <div class="hodlerInput">
+                            <input type="number" name="number" class="input" placeholder="your nbr phone" required
+                                ngModel [(ngModel)]="InfoPersonal.nbrtele">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="right offset-lg-2 col-lg-5 col-md-1 ">
+                        <div class="hodlerInput">
+                            <input type="file" name="picture" class="input" id="inputfile" required ngModel #p="ngModel"
+                                (change)="setimage($event)">
+
+                            <img src="" alt="">
+                        </div>
+                        <div class="hodlerInput">
+                            <div class="form-group holdertextarea">
+                                <label for=""> </label>
+                                <textarea class="form-control " name="adress" id="" rows="6" placeholder="your address"
+                                    required ngModel [(ngModel)]="InfoPersonal.adress"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row HolderButton">
+                        <button class="btn button submit" type="submit">
+                            login <span class=" badge badge-primary"></span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>

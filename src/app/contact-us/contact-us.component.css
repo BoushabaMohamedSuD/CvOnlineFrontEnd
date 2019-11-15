@@ -1,0 +1,30 @@
+#Path_1 {
+    /*fill: url(#LinearGradientFill1);*/
+
+    /*stroke: rgb(112, 112, 112);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;*/
+}
+
+.Rectangle_1 {
+
+    /*  overflow: visible;
+    position: relative;
+    left: 500px;*/
+
+}
+
+#test12 {
+    background-color: aqua;
+    width: 790.619485px;
+    height: 1118.153874px;
+    position: absolute;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 5px;
+    border-style: inset;
+
+}

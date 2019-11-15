@@ -1,0 +1,27 @@
+<div (click)="Click(-1,$event);$event.stopPropagation()" #Main>
+    <router-outlet></router-outlet>
+    <div class="container-fluid ">
+        <div class="bg-dark  MainHolder">
+            <div class="row col-lg-12 bg-dark ">
+                <div class="row col-lg-2  SingleRow" #SingleRow (click)="Click(i,$event);$event.stopPropagation()"
+                    *ngFor="let cv of Cvs;let i=index;">
+                    <div *ngIf="cv.kleActive==true">
+                        <img *ngIf="SrsImages!=null" name="{{i}}" src="{{SrsImages[i].src}}" alt="" class="HolderImage">
+                        <input *ngIf="cv.kleActive" [(ngModel)]="inputActiveValue" type="text" name="title">
+                        <p class="TitleP" *ngIf="!cv.kleActive">{{cv.title}} </p>
+
+                    </div>
+                    <div *ngIf="cv.kleActive==false">
+                        <img *ngIf="SrsImages!=null" name="{{i}}" src="{{SrsImages[i].src}}" alt="" class="HolderImage">
+
+                        <input *ngIf="cv.kleActive" ngModel type="text" name="title" placeholder="Tile of cv">
+                        <p class="TitleP" *ngIf="!cv.kleActive">{{cv.title}} </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

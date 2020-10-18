@@ -1,5 +1,10 @@
 import { Headers, Http } from '@angular/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Injectable } from '@angular/core';
+
+@Injectable()
+
 export class HttpControl {
   private Url: string='http://localhost:5236/Maven/';
   constructor(private http: HttpClient) {

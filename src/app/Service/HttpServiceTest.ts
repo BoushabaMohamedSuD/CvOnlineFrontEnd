@@ -1,7 +1,9 @@
 import { Http, Headers } from '@angular/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class HttpService {
 
   userc: { username: String, password: String };

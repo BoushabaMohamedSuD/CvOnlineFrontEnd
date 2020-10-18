@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileHttp } from '../Service/ProfileHttp';
 import { ManagementMakeProfile } from '../Service/ManagementProfile';
 declare var jsPDF: any;
-import * as html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-cv-export',

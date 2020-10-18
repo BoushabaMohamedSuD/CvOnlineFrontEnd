@@ -1,7 +1,10 @@
 import { ManagementMakeProfile } from './../Service/ManagementProfile';
 import { Component, OnInit, ElementRef } from '@angular/core';
 declare var jsPDF: any;
-import * as html2canvas from 'html2canvas';
+
+// keep it in this way to fix no compatible signature
+//instead of this  import * as html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas';
 
 
 @Component({

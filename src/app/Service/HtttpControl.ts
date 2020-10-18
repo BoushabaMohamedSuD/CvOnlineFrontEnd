@@ -1,19 +1,21 @@
 import { Headers, Http } from '@angular/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class HttpControl {
+  private Url: string='http://localhost:5236/Maven/';
   constructor(private http: HttpClient) {
 
   }
 
 
+
   SubmiteLogin(userLogin: { username: string, password: string }) {
-    return this.http.post('http://localhost:5236/Maven/login', userLogin, { observe: 'response' });
+    return this.http.post(this.Url+'login', userLogin, { observe: 'response' });
 
   }
   SubmiteRegistre(userRegistre: { username: string, password: string, email: string, confirm_password: string }) {
     // let headers2: Headers = new Headers({ 'Authorization': 'Bearer ' + token });
     console.log(userRegistre);
-    return this.http.post('http://localhost:5236/Maven/registre', userRegistre, { observe: 'response' });
+    return this.http.post(this.Url+'registre', userRegistre, { observe: 'response' });
   }
   SubmitePersonalInfo(formData: FormData) {
     let token: string;
@@ -21,7 +23,7 @@ export class HttpControl {
     if (token != null) {
       const headers: Headers = new Headers({ Authorization: 'Bearer ' + token });
       // we need to define the link from backend
-      return this.http.post('http://localhost:5236/Maven/isConnectedjwt', { headers, observe: 'response' });
+      return this.http.post(this.Url+'isConnectedjwt', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -40,7 +42,7 @@ export class HttpControl {
 
       // we need to define the link from backend
 
-      return this.http.post('http://localhost:5236/Maven/CreateNewCv', CvTitle, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewCv', CvTitle, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -57,7 +59,7 @@ export class HttpControl {
 
       // we need to define the link from backend
 
-      return this.http.post('http://localhost:5236/Maven/UpdateCv', CvTitles, { headers, observe: 'response' });
+      return this.http.post(this.Url+'UpdateCv', CvTitles, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -77,7 +79,7 @@ export class HttpControl {
 
       // we need to define the link from backend
 
-      return this.http.post('http://localhost:5236/Maven/DeleteCv', CvTitle, { headers, observe: 'response' });
+      return this.http.post(this.Url+'DeleteCv', CvTitle, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -93,7 +95,7 @@ export class HttpControl {
 
       // we need to define the link from backend
 
-      return this.http.get('http://localhost:5236/Maven/ShowCv', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowCv', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -112,7 +114,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/CreateNewInfoPersonal', info, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewInfoPersonal', info, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -132,7 +134,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/UploadImage', imageFormData, { headers, observe: 'response' });
+      return this.http.post(this.Url+'UploadImage', imageFormData, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -160,7 +162,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/CreateNewFormation', Formtaions, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewFormation', Formtaions, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -183,7 +185,7 @@ export class HttpControl {
       // .append('FileName', FileName as string)
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/UploadImage', imageFormData, { headers, observe: 'response' });
+      return this.http.post(this.Url+'UploadImage', imageFormData, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -208,7 +210,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/CreateNewCompetence', Competences, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewCompetence', Competences, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -233,7 +235,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/CreateNewLanguage', Languages, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewLanguage', Languages, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -260,7 +262,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.post('http://localhost:5236/Maven/CreateNewLeisure', Languages, { headers, observe: 'response' });
+      return this.http.post(this.Url+'CreateNewLeisure', Languages, { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -280,7 +282,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.get('http://localhost:5236/Maven/ShowFormation', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowFormation', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -298,7 +300,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.get('http://localhost:5236/Maven/ShowInfoPersonal', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowInfoPersonal', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -316,7 +318,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.get('http://localhost:5236/Maven/ShowCompetence', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowCompetence', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -334,7 +336,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.get('http://localhost:5236/Maven/ShowLeisure', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowLeisure', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -352,7 +354,7 @@ export class HttpControl {
 
       // we need to define the link from backend
       console.log('sending Ifon to backend');
-      return this.http.get('http://localhost:5236/Maven/ShowLanguage', { headers, observe: 'response' });
+      return this.http.get(this.Url+'ShowLanguage', { headers, observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -377,7 +379,7 @@ export class HttpControl {
       // we need to define the link from backend
       console.log('sending Ifon to backend');
       // tslint:disable-next-line:max-line-length
-      return this.http.get('http://localhost:5236/Maven/Getimage/infoPersonel/InfoPersonal', { headers, responseType: 'blob', observe: 'response' });
+      return this.http.get(this.Url+'Getimage/infoPersonel/InfoPersonal', { headers, responseType: 'blob', observe: 'response' });
     } else {
       console.log('you are not connected');
     }
@@ -401,7 +403,7 @@ export class HttpControl {
       // we need to define the link from backend
       console.log('sending Ifon to backend byId');
       // tslint:disable-next-line:max-line-length
-      return this.http.get('http://localhost:5236/Maven/Getimage/infoPersonel/InfoPersonal', { headers, responseType: 'blob', observe: 'response' });
+      return this.http.get(this.Url+'Getimage/infoPersonel/InfoPersonal', { headers, responseType: 'blob', observe: 'response' });
     } else {
       console.log('you are not connected');
     }
